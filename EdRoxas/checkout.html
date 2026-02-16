@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+
+    <header>
+        <h1>Checkout</h1>
+    </header>
+
+    <div class="checkout-container">
+        
+        <main>
+            <section id="shipping-section">
+                <form>
+                    <fieldset>
+                        <legend>Shipping Address</legend>
+                        
+                        <label for="name">Full Name:</label><br>
+                        <input type="text" id="name" name="fullname" required><br><br>
+
+                        <label for="street">Street Address:</label><br>
+                        <input type="text" id="street" name="street" required><br><br>
+
+                        <label for="zip">Zip Code:</label><br>
+                        <input type="text" id="zip" name="zip" required>
+                    </fieldset>
+                </form>
+            </section>
+
+            <hr>
+
+            <section id="payment-section">
+                <h2>Payment Details</h2>
+                
+                <form action="confirmation.html" method="POST">
+                    <fieldset>
+                        <legend>Select Payment Method</legend>
+                        
+                        <label>
+                            <input type="radio" name="payment_method" value="credit_card" checked> 
+                            Credit Card
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="payment_method" value="paypal"> 
+                            PayPal
+                        </label>
+                    </fieldset>
+                    
+                    <br>
+                    <button type="submit">Place Order</button>
+                </form>
+            </section>
+        </main>
+
+        <aside class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Items (2): $799.98</p>
+            <p>Shipping: $15.00</p>
+            <p>Tax: $40.00</p>
+            <hr>
+            <h3>Total: $854.98</h3>
+        </aside>
+
+    </div>
+
+</body>
+</html>
