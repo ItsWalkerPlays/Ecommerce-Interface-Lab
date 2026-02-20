@@ -1,0 +1,162 @@
+/* =========================================
+   TASK 1 — GLOBAL STYLES (Visual Foundation)
+   ========================================= */
+
+/* CSS Variables (Color System) */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --bg-light: #f4f4f4;
+  --text-main: #333;
+  --card-bg: #ffffff;
+  --border-color: #dddddd;
+}
+
+/* Base Typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+
+/* =========================================
+   TASK 2 — INTERACTIVE STATES & TRANSITIONS
+   ========================================= */
+
+/* Navigation Links */
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 8px 12px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+  background-color: var(--accent-color);
+}
+
+nav a:active {
+  background-color: #c75c0d;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Focus for accessibility */
+input:focus,
+button:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+
+/* =========================================
+   TASK 3 — PRODUCT CARD STYLING
+   ========================================= */
+
+article {
+  width: 220px;
+  display: inline-block;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px;
+  vertical-align: top;
+}
+
+/* Alternate background */
+article:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+/* =========================================
+   TASK 4 — ADVANCED SELECTORS & PSEUDO-ELEMENTS
+   ========================================= */
+
+/* Empty Cart */
+.cart-container:empty {
+  padding: 20px;
+  border: 2px dashed var(--border-color);
+  background-color: #fff3cd;
+  text-align: center;
+}
+
+/* Currency Symbol */
+.price::before {
+  content: "₱";
+  color: var(--accent-color);
+}
+
+/* Required Form Fields */
+input:required {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+
+/* =========================================
+   TASK 5 — DETAILED DATA STYLING
+   ========================================= */
+
+/* Product Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+}
+
+td:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Order History Bullets */
+ul::marker {
+  color: var(--accent-color);
+}
+
+/* Review Quotes */
+.review::before {
+  content: "“";
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+.review::after {
+  content: "”";
+  font-size: 20px;
+  color: var(--accent-color);
+}
