@@ -160,3 +160,79 @@ ul::marker {
   font-size: 20px;
   color: var(--accent-color);
 }
+
+/* ==================================
+   LAB 3 — MOBILE FIRST LAYOUT
+================================== */
+
+/* -------- MOBILE (Default) -------- */
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header Flexbox */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Product Grid (1 column mobile) */
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Cart Items */
+.cart-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* -------- TABLET -------- */
+@media (min-width: 481px) {
+
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* -------- DESKTOP -------- */
+@media (min-width: 769px) {
+
+  /* Header Horizontal */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* 4 Column Product Grid */
+  .product-container {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+
+  /* Checkout Side-by-Side */
+  .checkout-container {
+    display: flex;
+    gap: 40px;
+  }
+
+}
